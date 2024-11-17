@@ -51,65 +51,65 @@
             position: relative;
         }
 
-        @media (max-width: 920px) {
-.hero-section {
-            height: 70vh;
-            background: url('p15.jpg') no-repeat center center;
-            background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-        }
+       @media (max-width: 920px) {
+    .hero-section {
+        height: 70vh;
+        background: url('p15.jpg') no-repeat center center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+    }
+}
 
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
 
-        .hero-content {
-            z-index: 2;
-        }
+.hero-content {
+    z-index: 2;
+}
 
-        /* .about-section, */
-        .gallery-section,
-        .services-section,
-        .testimonials-section,
-        .contact-section {
-            padding: 60px 20px;
-        }
+/* .about-section, */
+.gallery-section,
+.services-section,
+.testimonials-section,
+.contact-section {
+    padding: 60px 20px;
+}
 
-        .services-section,
-        .testimonials-section {
-            background-color: #f8f9fa;
-        }
+.services-section,
+.testimonials-section {
+    background-color: #f8f9fa;
+}
 
-        .contact-section {
-            background-color: #343a40;
-            color: white;
-        }
+.contact-section {
+    background-color: #343a40;
+    color: white;
+}
 
-        .footer-section {
-            padding: 20px;
-            text-align: center;
-            background-color: #212529;
-            color: white;
-        }
+.footer-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #212529;
+    color: white;
+}
 
-        /* Custom styles for smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
+/* Custom styles for smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
 
-        /* Rotating logo animation */
+/* Rotating logo animation */
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -123,7 +123,6 @@
 .rotating-logo {
     animation: rotate 5s linear infinite;
 }
-
 
 /* Default Styling for Navbar */
 .navbar .container {
@@ -633,4 +632,55 @@ html, body {
 
 body::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
+}
+html, body {
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+* {
+    box-sizing: border-box !important;
+}
+
+
+.team-img {
+    width: 100%;              /* Ensures the image takes up 100% of the column width */
+    height: auto;             /* Maintains the aspect ratio */
+    object-fit: cover;        /* Makes sure the image covers the container */
+}
+
+/* Adjust for tablets (iPad, etc.) */
+@media (max-width: 1024px) {
+    .team-img {
+        max-width: 900px;       /* Ensures the image can grow to the full width */
+        height: 300px;         /* Set a fixed height for better scaling */
+    }
+
+    .col-md-3 {
+        flex: 0 0 50%;         /* This will make each image take up 50% of the screen on tablets */
+    }
+}
+
+/* Adjust for mobile screens */
+@media (max-width: 768px) {
+    .team-img {
+        max-width: 100%;       /* Ensure images scale down for mobile devices */
+        height: 250px;         /* Adjust image height on small screens */
+    }
+
+    .col-6 {
+        flex: 0 0 100%;        /* Ensures the images take up the full screen width on small screens */
+    }
+}
+
+/* Large screen adjustments (Desktop and larger tablets) */
+@media (min-width: 1025px) {
+    .team-img {
+        height: 350px;         /* Increase image height on larger screens */
+    }
+
+    .col-md-3 {
+        flex: 0 0 25%;         /* Each image takes up 25% of the row on large screens */
+    }
 }
