@@ -285,9 +285,38 @@ html {
     flex-wrap: nowrap !important; /* Prevent wrapping on large screens */
 }
 
+@media (min-width: 770){
+    /* Default layout for larger screens */
+.team-section {
+    padding: auto !important;
+}
+
+.team-section .team-img {
+    width: 300px !important; /* Adjust size for team images */
+    height: auto !important; /* Let the height adjust based on the image's aspect ratio */
+    margin: 0 auto !important; /* Ensure the image is centered */
+    object-fit: contain !important; /* Ensure the full image is displayed without cropping */
+}
+
+
+/* Center text in team section */
+.team-section h4, .team-section p {
+    margin: 0 !important;
+    padding-top: 10px !important;
+}
+
+/* Flexbox for horizontal display on large screens */
+.team-section .row {
+    display: flex !important;
+    justify-content: space-evenly !important; /* Reduce space between images */
+    align-items: center !important;
+    flex-wrap: nowrap !important; /* Prevent wrapping on large screens */
+}
+}
+
 
 /* For smaller screens (below 920px), images will stack */
-@media (max-width: 920px) {
+@media (max-width: 769px) {
     .team-section {
         padding: 0 !important; /* Remove extra padding around the section */
         margin: 0 !important;  /* Remove extra margins */
